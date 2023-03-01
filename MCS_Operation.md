@@ -25,15 +25,7 @@ This document contains the description of the operation of the Mount Control Sys
 | TCS Communication Protocol Interface | LTS-306 | 1.1 |
 | TCS Software Component Interface | LTS-307 | 1.2 Draft |
 
-## Operation
-
-FIXME: This section is organized as follows. In the first chapter the different possibilities for interaction with the
-TMA are described, explaining their relationship with the operation modes of the machine. In the second chapter, the
-TCS–MCS interaction through the DDS interface is explained in detail. Then, in the third chapter, the operation modes
-of the TMA are detailed. Finally, in the fourth chapter the functions that can be executed by the TMA subsystems are
-explained.
-
-### Interaction with the TMA
+## Interaction with the TMA
 
 There are two ways for interacting with the TMA, using the CSC or the EUI/HHD. The commands allowed for both are the
 same, but the CSC has less commands available for the end user than the EUI/HHD. Having this in mind, three commanders,
@@ -61,7 +53,7 @@ HHD -d-> TMA
 @enduml
 ```
 
-#### Commands
+### Commands
 
 The commands available for the TMA are described in the [PXI Documentation repo](https://gitlab.tekniker.es/publico/3151-lsst/documentation/pxicontroller_documentation)
 inside the `02 CommandsAndEventsManagement` directory in the `03 Commands.md` file.
@@ -69,7 +61,7 @@ inside the `02 CommandsAndEventsManagement` directory in the `03 Commands.md` fi
 For sending these commands a custom protocol over TCP/IP is used, this protocol is defined in the MtMountOperationManager
 repo [here](https://gitlab.tekniker.es/aut/projects/3151-LSST/OperationManager/lsst/-/blob/develop/tma_management/doc/protocol.md).
 
-#### Telemetry
+### Telemetry
 
 The telemetry is the data generated in the PXIs that must be stored in the EFD (Rubin data storage system) and MCC. As the
 telemetry from the PXIs (TMA and AUX PXIs) is sent using a custom protocol the data is received in the EUI, processed,
@@ -117,7 +109,7 @@ The telemetry sent to the CSC is divided in topics, one for each subsystem, and 
 - timestamp: timestamp value for the data
 - variable names defined in the configuration file
 
-#### Events
+### Events
 
 The events are defined to inform the CSC of the TMA status, as the boolean and state variables are not sent using the
 telemetry, the structure for the events is shown in the diagram below.
