@@ -28,8 +28,9 @@ This document contains the description of the operation of the Mount Control Sys
 ## Interaction with the TMA
 
 There are two ways for interacting with the TMA, using the CSC or the EUI/HHD. The commands allowed for both are the
-same, but the CSC has less commands available for the end user than the EUI/HHD. Having this in mind, three commanders,
-systems that can command the TMA, are defined:
+same, this means that the TMA reacts in the same way for every commander. The only main difference between the EUI/HHD
+and the CSC is that the CSC has less commands available for the end user than the EUI/HHD.
+Having this in mind, three commanders, systems that can command the TMA, are defined:
 
 - CSC (Commandable SAL Component). Coded by Rubin and designed for observation.
 - EUI (Engineering User Interface). Coded by Tekniker as a tool for maintenance and engineering tasks.
