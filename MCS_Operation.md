@@ -54,6 +54,18 @@ HHD -d-> TMA
 @enduml
 ```
 
+### Managing the commander
+
+There is a command (id: 2103) for changing from one commander to another, this command can be sent at any time to change
+the commander, unless the actual commander is the HHD. When the actual commander is the HHD, the command must be
+released by the HHD on purpose, this means transferring the command to another commander CSC/EUI.
+
+It is important for the commander, that once the command is obtained, a clock command (id: 3000) must be sent periodically
+to keep the system from halting. If the clock command is not sent for more than 5 seconds all the systems that have
+possible movements FAULT, this means that they are abruptly stopped to prevent any issues due to the commander loss.
+This means that all systems except the temperature controllers, main power supply and OSS are halted (by going to FAULT
+state) if the commander stops sending the clock.
+
 ### Commands
 
 The commands available for the TMA are described in the [PXI Documentation repo](https://gitlab.tekniker.es/publico/3151-lsst/documentation/pxicontroller_documentation)
