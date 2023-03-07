@@ -91,7 +91,9 @@ EUI -u-> CSC
 @enduml
 ```
 
-The telemetry sent to the CSC is divided in topics, one for each subsystem, and formatted in JSON as follows:
+The telemetry sent to the CSC is a reduced set of the telemetry stored in the MCC, as defined in the configuration file
+mentioned before. This file is divided in topics, that match the topics sent to the CSC, there is one for each subsystem.
+The topics sent to the CSC are formatted in JSON as follows:
 
 ```json
 {
@@ -106,7 +108,9 @@ The telemetry sent to the CSC is divided in topics, one for each subsystem, and 
 ```
 
 - topicID: identifier for the topic (subsystem)
-- timestamp: timestamp value for the data
+- timestamp: timestamp value for the topic. This timestamp is unique for the topic, therefore it could happen that variables
+  inside the topic don't fully match in time, as the PXI sends each variable with a different timestamp value but then
+  they are gathered together inside the same topic and timestamped as a whole.
 - variable names defined in the configuration file
 
 ### Events
