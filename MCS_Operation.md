@@ -2,7 +2,7 @@
 
 | **Requested by:** | **LSST PO** |
 | --- | --- |
-| **Doc. Code / Version nº:** | 3151_MCS_0001 |
+| **Doc. Code:** | 3151_MCS_0001 |
 | **Editor:** | Julen Garcia |
 | **Approved by:** | Ismael Ruiz de Argandoña |
 
