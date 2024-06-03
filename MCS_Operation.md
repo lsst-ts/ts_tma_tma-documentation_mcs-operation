@@ -68,7 +68,7 @@ state) if the commander stops sending the clock.
 
 ### Commands
 
-The commands available for the TMA are described in the [PXI Documentation repo](https://gitlab.tekniker.es/publico/3151-lsst/documentation/pxicontroller_documentation)
+The commands available for the TMA are described in the [PXI Documentation repo](https://github.com/lsst-ts/ts_tma_tma-documentation_pxi-controller_documentation)
 inside the `02 CommandsAndEventsManagement` directory in the `03 Commands.md` file.
 
 For sending these commands a custom protocol over TCP/IP is used, this protocol is defined in the MtMountOperationManager
@@ -81,7 +81,7 @@ telemetry from the PXIs (TMA and AUX PXIs) is sent using a custom protocol the d
 displayed, stored locally in the MCC with high resolution and finally sent to the CSC (this is represented in the following
 diagram). For defining which telemetry is obtained from the PXIs and which is sent to the CSC, a configuration file is
 used. This telemetry configuration file use is explained in the
-[HMI Documentation repo](https://gitlab.tekniker.es/publico/3151-lsst/documentation/hmicomputers_documentation)
+[HMI Documentation repo](https://github.com/lsst-ts/ts_tma_tma-documentation_hmi-computers_documentation)
 inside the `04 TelemetryManagement` directory in the `00 TelemetryManagement.md` file.
 
 ```plantuml
@@ -130,7 +130,7 @@ The topics sent to the CSC are formatted in JSON as follows:
 
 The events are defined to inform the CSC of the TMA status, as the boolean and state variables are not sent using the
 telemetry, the structure for the events is shown in the diagram below.
-All the defined events are explained in the [PXI Documentation repo](https://gitlab.tekniker.es/publico/3151-lsst/documentation/pxicontroller_documentation)
+All the defined events are explained in the [PXI Documentation repo](https://github.com/lsst-ts/ts_tma_tma-documentation_pxi-controller_documentation)
 inside the `02 CommandsAndEventsManagement` directory in the `04 Events.md` file.
 
 ```plantuml
