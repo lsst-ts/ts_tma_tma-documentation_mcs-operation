@@ -72,7 +72,7 @@ The commands available for the TMA are described in the [PXI Documentation repo]
 inside the `02 CommandsAndEventsManagement` directory in the `03 Commands.md` file.
 
 For sending these commands a custom protocol over TCP/IP is used, this protocol is defined in the MtMountOperationManager
-repo [here](https://gitlab.tekniker.es/aut/projects/3151-LSST/OperationManager/lsst/-/blob/develop/tma_management/doc/protocol.md).
+repo [here](https://github.com/lsst-ts/ts_tma_operation-manager_mt-mount-operation-manager/blob/develop/tma_management/doc/protocol.md).
 
 ### Telemetry
 
