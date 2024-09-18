@@ -36,7 +36,7 @@ Having this in mind, three commanders, systems that can command the TMA, are def
 - EUI (Engineering User Interface). Coded by Tekniker as a tool for maintenance and engineering tasks.
 - HHD (Hand Held Device). Runs a simplified version of the EUI coded by Tekniker as a tool for maintenance and engineering tasks.
 
-```plantuml
+```{uml}
 @startuml
 actor operator
 node CSC
@@ -84,7 +84,7 @@ used. This telemetry configuration file use is explained in the
 [HMI Documentation repo](https://github.com/lsst-ts/ts_tma_tma-documentation_hmi-computers_documentation)
 inside the `04 TelemetryManagement` directory in the `00 TelemetryManagement.md` file.
 
-```plantuml
+```{uml}
 @startuml
 node CSC
 node EUI [
@@ -133,7 +133,7 @@ telemetry, the structure for the events is shown in the diagram below.
 All the defined events are explained in the [PXI Documentation repo](https://github.com/lsst-ts/ts_tma_tma-documentation_pxi-controller_documentation)
 inside the `02 CommandsAndEventsManagement` directory in the `04 Events.md` file.
 
-```plantuml
+```{uml}
 @startuml
 node CSC
 node MtMountOperationManager
